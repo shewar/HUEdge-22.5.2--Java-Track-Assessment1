@@ -37,7 +37,7 @@ public class CsvParser {
 						throw new ShowNotValid("Movie data is missing");
 					}
 					Show show  = new Show(movieValues[0],movieValues[1],movieValues[2],movieValues[3],movieValues[4],movieValues[5],movieValues[6],
-							movieValues[7],movieValues[8],movieValues[9],movieValues[10],movieValues[11]);
+							Integer.parseInt(movieValues[7].strip()),movieValues[8],movieValues[9],movieValues[10],movieValues[11]);
 					
 					movieList.add(show);
 				}

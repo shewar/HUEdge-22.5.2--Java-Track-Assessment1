@@ -26,7 +26,7 @@ public class Show {
 	@Column(name="date_added")
 	private String date_added;
 	@Column(name="release_year")
-	private String release_year;
+	private int release_year;
 	@Column(name="rating")
 	private String rating;
 	@Column(name="duration")
@@ -40,7 +40,7 @@ public class Show {
 		
 	}
 	public Show(String show_id, String type, String title, String director, String cast, String country,
-			String date_added, String release_year, String rating, String duration, String listed_in, String description) {
+			String date_added, int release_year, String rating, String duration, String listed_in, String description) {
 		super();
 		this.show_id = show_id;
 		this.type = type;
@@ -97,10 +97,10 @@ public class Show {
 	public void setDate_added(String date_added) {
 		this.date_added = date_added;
 	}
-	public String getRelease_year() {
+	public int getRelease_year() {
 		return release_year;
 	}
-	public void setRelease_year(String release_year) {
+	public void setRelease_year(int release_year) {
 		this.release_year = release_year;
 	}
 	public String getRating() {

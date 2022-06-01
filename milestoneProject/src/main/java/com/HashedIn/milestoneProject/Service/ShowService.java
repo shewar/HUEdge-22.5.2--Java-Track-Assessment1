@@ -85,18 +85,6 @@ public class ShowService {
 	
 	//it will check if data in csv is in sync with database. If in sync then add row in database else it will make it in sync then will add data
 	public void addShow(Show show) {
-		int showsCountInDb = (int)repository.count();
-		showList = parser.getmovies();
-		if(showsCountInDb!=showList.size()) {
-			for(Show show1:showList) {
-				if(repository.equals(show1)) {
-					continue;
-				}
-				else {
-					repository.save(show1);
-				}
-			}
-		}
 		repository.save(show);
 		
 	}
